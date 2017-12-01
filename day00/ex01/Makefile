@@ -1,0 +1,40 @@
+NAME = page_blanche
+
+SRC_PATH = ./srcs/
+
+OBJ_PATH = ./objs/
+
+SRC_NAME = main.cpp \
+		ClassPeople.cpp
+
+OBJ_NAME = $(SRC_NAME:.cpp=.o)
+
+SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
+
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+
+INCLUDE = -I ./includes
+
+FLAGS = -Wall -Werror -Wextra
+
+CC = clang++
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(INCLUDE) -o $(NAME) $^
+
+$(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	$(CC) $(INCLUDE) -o $@ -c $<
+
+clean:
+	/bin/rm -f $(OBJ)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
+
+fclean: clean
+	/bin/rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
