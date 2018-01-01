@@ -1,19 +1,16 @@
-NAME = phonebook
+NAME = cato9tails
 
 SRC_PATH = ./srcs/
 
 OBJ_PATH = ./objs/
 
-SRC_NAME = main.cpp \
-		ClassPeople.cpp
+SRC_NAME = main.cpp
 
 OBJ_NAME = $(SRC_NAME:.cpp=.o)
 
 SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
-
-INCLUDE = -I ./includes
 
 FLAGS = -Wall -Werror -Wextra
 
@@ -22,11 +19,11 @@ CC = clang++
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(INCLUDE) -o $(NAME) $^
+	$(CC) $(FLAGS) -o $(NAME) $^
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	$(CC) $(INCLUDE) -o $@ -c $<
+	$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
 	/bin/rm -f $(OBJ)

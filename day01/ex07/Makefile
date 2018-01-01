@@ -1,11 +1,11 @@
-NAME = phonebook
+NAME = replace
 
 SRC_PATH = ./srcs/
 
 OBJ_PATH = ./objs/
 
 SRC_NAME = main.cpp \
-		ClassPeople.cpp
+		ClassReplace.cpp
 
 OBJ_NAME = $(SRC_NAME:.cpp=.o)
 
