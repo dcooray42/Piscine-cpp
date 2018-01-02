@@ -52,7 +52,7 @@ void	ClapTrap::rangedAttack(std::string const & target) const
 void	ClapTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "CL4P-TP " << this->_name << " attacks " << target;
-	std::cout << " at range, causing " << this->_meleeAttackDamage;
+	std::cout << " at melee, causing " << this->_meleeAttackDamage;
 	std::cout << " points of damage !" << std::endl;
 	return ;
 }

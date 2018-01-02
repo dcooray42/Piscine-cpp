@@ -86,7 +86,7 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 		}
 		else
 		{
-			std::cout << " wants to attack " << target << "but is tired. ";
+			std::cout << " wants to attack " << target << " but is tired. ";
 			std::cout << "Leaves the battle dealing 0 point of damage !" << std::endl;
 		}
 		this->_energyPoints -= 25;

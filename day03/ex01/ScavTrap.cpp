@@ -66,7 +66,7 @@ void	ScavTrap::rangedAttack(std::string const & target) const
 void	ScavTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "SC4V-TP " << this->_name << " attacks " << target;
-	std::cout << " at range, causing " << this->_meleeAttackDamage;
+	std::cout << " at melee, causing " << this->_meleeAttackDamage;
 	std::cout << " points of damage !" << std::endl;
 	return ;
 }
