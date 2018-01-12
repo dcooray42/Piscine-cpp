@@ -150,3 +150,8 @@ int	Player::getPosY(void) const
 {
 	return (this->_pos_y);
 }
+
+_t_list *	Player::getBullet(void) const
+{
+	return (this->_bullet);
+}

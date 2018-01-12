@@ -90,6 +90,18 @@ void	Enemy::_destroyEnemy(void)
 
 void	Enemy::_checkCollision(Player *player)
 {
+	_t_list	*tmp = player->getBullet();
+
+	while (tmp)
+	{
+		if (this->_pos_y == tmp->content->getPosY() && this->_pos_x == tmp->content->getPosX())
+		{
+			this->_pos_x = 0;
+			this->_pos_y = 0;
+			tmp->content->setPosY();
+		}
+		tmp = tmp->next;
+	}
 	if (this->_pos_x == player->getPosX() && this->_pos_y == player->getPosY())
 		player->setAlive();
 	return ;

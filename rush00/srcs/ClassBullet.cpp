@@ -43,6 +43,12 @@ int	Bullet::getPosY(void) const
 	return (this->_pos_y);
 }
 
+void	Bullet::setPosY(void)
+{
+	this->_pos_y = 1;
+	return ;
+}
+
 int	Bullet::getShooted(void) const
 {
 	return (this->_shooted);

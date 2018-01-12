@@ -13,6 +13,7 @@ public	:
 	void	setShooted(int n);
 	int	getPosX(void) const;
 	int	getPosY(void) const;
+	void	setPosY(void);
 	int	getShooted(void) const;
 
 private	:

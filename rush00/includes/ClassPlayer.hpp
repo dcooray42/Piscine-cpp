@@ -1,7 +1,7 @@
 #ifndef CLASSPLAYER_HPP
 # define CLASSPLAYER_HPP
 
-# include "ClassBullet.hpp"
+# include "List.hpp"
 # include <ncurses.h>
 
 class	Player
@@ -16,6 +16,7 @@ public	:
 	void	setAlive(void);
 	int	getPosX(void) const;
 	int	getPosY(void) const;
+	_t_list *	getBullet(void) const;
 
 private	:
 	Player(void);
@@ -33,11 +34,6 @@ private	:
 	void	_renderBullet(void) const;
 	void	_destroyBullet(void);
 
-	typedef struct	_s_list
-	{
-		Bullet	*content;
-		_s_list	*next;
-	}		_t_list;
 	_t_list	*_bullet;
 };
 

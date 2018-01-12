@@ -1,11 +1,14 @@
-NAME = phonebook
+NAME = ft_retro
 
 SRC_PATH = ./srcs/
 
 OBJ_PATH = ./objs/
 
 SRC_NAME = main.cpp \
-		ClassPeople.cpp
+		ClassPlayer.cpp \
+		ClassEnemy.cpp \
+		ClassBullet.cpp \
+		NamespaceNcurses.cpp
 
 OBJ_NAME = $(SRC_NAME:.cpp=.o)
 
@@ -15,6 +18,8 @@ OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
 INCLUDE = -I ./includes
 
+NCURSES = -lncurses
+
 FLAGS = -Wall -Werror -Wextra
 
 CC = clang++
@@ -22,7 +27,7 @@ CC = clang++
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(INCLUDE) -o $(NAME) $^
+	$(CC) $(FLAGS) $(INCLUDE) $(NCURSES) -o $(NAME) $^
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	@mkdir $(OBJ_PATH) 2> /dev/null || true

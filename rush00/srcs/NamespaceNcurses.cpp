@@ -1,8 +1,4 @@
 #include "NamespaceNcurses.hpp"
-#include "ClassPlayer.hpp"
-#include "ClassEnemy.hpp"
-#include <ctime>
-#include <iostream>
 
 void	Ncurses::init(void)
 {

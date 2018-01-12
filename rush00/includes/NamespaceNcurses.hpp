@@ -2,6 +2,8 @@
 # define NAMESPACENCURSES_HPP
 
 # include <ncurses.h>
+# include "ClassPlayer.hpp"
+# include "ClassEnemy.hpp"
 
 namespace	Ncurses
 {
