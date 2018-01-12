@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	$(CC) $(INCLUDE) -o $@ -c $<
+	$(CC) $(FLAGS) $(INCLUDE) -o $@ -c $<
 
 clean:
 	/bin/rm -f $(OBJ)
