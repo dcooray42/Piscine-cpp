@@ -90,7 +90,7 @@ void	Enemy::_destroyEnemy(void)
 
 void	Enemy::_checkCollision(Player *player)
 {
-	_t_list	*tmp = player->getBullet();
+	Player::_t_list	*tmp = player->getBullet();
 
 	while (tmp)
 	{

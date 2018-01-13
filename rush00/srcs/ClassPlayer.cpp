@@ -151,7 +151,7 @@ int	Player::getPosY(void) const
 	return (this->_pos_y);
 }
 
-_t_list *	Player::getBullet(void) const
+Player::_t_list *	Player::getBullet(void)
 {
 	return (this->_bullet);
 }
