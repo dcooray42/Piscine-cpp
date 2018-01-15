@@ -10,8 +10,8 @@ public	:
 	Pony(void);
 	~Pony(void);
 
-	void		ponyOnTheHeap(std::string name, std::string color, std::string height, std::string weight);
-	static Pony	*ponyOnTheStack(std::string name, std::string color, std::string height, std::string weight);
+	void		ponyOnTheStack(std::string name, std::string color, std::string height, std::string weight);
+	static Pony	*ponyOnTheHeap(std::string name, std::string color, std::string height, std::string weight);
 	void		displayInfo(void) const;
 
 private	:

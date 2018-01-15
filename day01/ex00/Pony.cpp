@@ -15,7 +15,7 @@ Pony::~Pony(void)
 	return ;
 }
 
-void	Pony::ponyOnTheHeap(std::string name,
+void	Pony::ponyOnTheStack(std::string name,
 		std::string color, std::string height, std::string weight)
 {
 	this->_name = name;
@@ -24,11 +24,11 @@ void	Pony::ponyOnTheHeap(std::string name,
 	this->_weight = weight;
 
 	std::cout << "This message will be displayed if a pony called " << this->_name;
-	std::cout << " has been allocated on the heap." << std::endl; 
+	std::cout << " has been allocated on the stack." << std::endl; 
 	return ;
 }
 
-Pony	*Pony::ponyOnTheStack(std::string name,
+Pony	*Pony::ponyOnTheHeap(std::string name,
 		std::string color, std::string height, std::string weight)
 {
 	Pony	*horse = new Pony();
@@ -38,7 +38,7 @@ Pony	*Pony::ponyOnTheStack(std::string name,
 	horse->_height = height;
 	horse->_weight = weight;
 	std::cout << "This message will be displayed if a pony called " << horse->_name;
-	std::cout << " has benn allocated on the stack." << std::endl;
+	std::cout << " has been allocated on the heap." << std::endl;
 	return (horse);
 }
 
