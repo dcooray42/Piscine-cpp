@@ -6,7 +6,7 @@ Fixed::Fixed(void) : _nb(0)
 	return ;
 }
 
-Fixed::Fixed(int const i) : _nb(i << 8)
+Fixed::Fixed(int const i) : _nb(i << Fixed::_bits)
 {
 	std::cout << "Int constructor called" << std::endl;
 	return ;

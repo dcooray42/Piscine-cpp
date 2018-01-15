@@ -5,7 +5,7 @@ Fixed::Fixed(void) : _nb(0)
 	return ;
 }
 
-Fixed::Fixed(int const i) : _nb(i << 8)
+Fixed::Fixed(int const i) : _nb(i << Fixed::_bits)
 {
 	return ;
 }
@@ -105,7 +105,7 @@ Fixed &	Fixed::operator--(void)
 Fixed	Fixed::operator--(int)
 {
 	Fixed	fixed = *this;
-	this->_nb++;
+	this->_nb--;
 	return (fixed);
 }
 
