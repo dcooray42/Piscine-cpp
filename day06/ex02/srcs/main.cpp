@@ -41,7 +41,7 @@ void	identity_from_reference(Base & p)
 		std::cout << "A" << std::endl;
 		(void)tmpA;
 	}
-	catch (std::bad_cast &tmpA)
+	catch (std::bad_cast &bcA)
 	{
 		try
 		{
@@ -49,7 +49,7 @@ void	identity_from_reference(Base & p)
 			std::cout << "B" << std::endl;
 			(void)tmpB;
 		}
-		catch(std::bad_cast &tmpB)
+		catch(std::bad_cast &bcB)
 		{
 			try
 			{
@@ -57,7 +57,7 @@ void	identity_from_reference(Base & p)
 				std::cout << "C" << std::endl;
 				(void)tmpC;
 			}
-			catch (std::bad_cast &tmpC)
+			catch (std::bad_cast &bcC)
 			{
 				std::cout << "Error" << std::endl;
 			}
