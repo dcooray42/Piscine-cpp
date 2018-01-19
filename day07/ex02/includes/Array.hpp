@@ -108,19 +108,12 @@ public	:
 		}
 	};
 
-	T	operator[](int i)
+	T &	operator[](int i)
 	{
-		try
-		{
-			if (i < 0 || static_cast<unsigned int>(i) >= this->_size)
-				throw OutOfBoundException();
+		if (i < 0 || static_cast<unsigned int>(i) >= this->_size)
+			throw OutOfBoundException();
+		else
 			return (this->_array[i]);
-		}
-		catch (std::exception const &out)
-		{
-			std::cerr << out.what() << std::endl;
-		}
-		return (0);
 	}
 
 	unsigned int	size(void) const
