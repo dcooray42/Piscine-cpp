@@ -15,8 +15,6 @@ OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
 INCLUDE = -I ./includes
 
-NCURSES = -lncurses
-
 FLAGS = -Wall -Werror -Wextra
 
 CC = clang++
@@ -24,7 +22,7 @@ CC = clang++
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(INCLUDE) $(NCURSES) -o $(NAME) $^
+	$(CC) $(FLAGS) $(INCLUDE) -o $(NAME) $^
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
