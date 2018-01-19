@@ -14,7 +14,7 @@ void	test2(T & t)
 }
 
 template<typename T>
-void	iter(T * t, int size, void (*f)(T &))
+void	iter(T * t, int size, void (f)(T &))
 {
 	int	i = 0;
 
@@ -30,11 +30,11 @@ int	main(void)
 	for (int i = 0; i < 10; i++)
 		std::cout << tab[i] << std::endl;
 	std::cout << std::endl;
-	iter<int>(tab, 10, &test1);
+	iter<int>(tab, 10, test1);
 	for (int i = 0; i < 10; i++)
 		std::cout << tab[i] << std::endl;
 	std::cout << std::endl;
-	iter<int>(tab, 10, &test2);
+	iter<int>(tab, 10, test2);
 	for (int i = 0;	i < 10; i++)
 		std::cout << tab[i] << std::endl;
 	return (0);
